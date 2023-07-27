@@ -1,0 +1,31 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="bobak.uitests.org">
+    <test name="UI Tests" >
+        <groups>
+            <run>
+                <include name="ui"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.utils.BaseTest"/>
+            <class name="tests.ui.LoginUITest"/>
+            <class name="tests.ui.CreateProjectUITest"/>
+            <class name="tests.ui.CreateTaskUiApiTest"/>
+            <class name="tests.ui.CloseTaskUiApiTest"/>
+            <class name="tests.ui.CreateCommentUiApiTest"/>
+        </classes>
+    </test>
+    <test name="API Tests">
+        <groups>
+            <run>
+                <include name="api"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="tests.utils.BaseTest"/>
+            <class name="tests.api.UserApiTests"/>
+            <class name="tests.api.ProjectApiTests"/>
+            <class name="tests.api.TaskApiTests"/>
+        </classes>
+    </test>
+</suite>
